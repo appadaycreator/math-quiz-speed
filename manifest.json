@@ -1,0 +1,8 @@
+{
+  "name": "Math Quiz Speed",
+  "short_name": "math-quiz-sp",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6366f1"
+}
