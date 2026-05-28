@@ -1,8 +1,9 @@
 {
   "name": "Math Quiz Speed",
   "short_name": "math-quiz-sp",
-  "start_url": "/",
+  "start_url": "/math-quiz-speed/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#6366f1"
+  "theme_color": "#6366f1",
+  "scope": "/math-quiz-speed/"
 }
