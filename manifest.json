@@ -3,7 +3,7 @@
   "short_name": "math-quiz-sp",
   "start_url": "/math-quiz-speed/",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "#6366f1",
   "theme_color": "#6366f1",
   "scope": "/math-quiz-speed/"
 }
