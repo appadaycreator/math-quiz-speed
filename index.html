@@ -10,7 +10,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
 <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#6366f1" />
+<meta name="theme-color" content="#6D28D9" />
     <title>算数・数学クイズゲーム【無料】無料ゲーム</title>
     <meta name="description" content="四則演算・分数・方程式など難易度選択式の計算ゲーム。暗算力を楽しく鍛える。登録不要・完全無料でご利用いただけます。">
     <link rel="canonical" href="https://appadaycreator.com/math-quiz-speed/">
@@ -25,6 +25,7 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
 <meta name="twitter:image" content="https://appadaycreator.com/assets/ogp-default.png" />
 <meta name="twitter:description" content="四則演算・分数・方程式など難易度選択式の計算ゲーム。暗算力を楽しく鍛える。登録不要・完全無料でご利用いただけます。" />
     <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="算数・数学クイズゲーム【無料】無料ゲーム" />
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧮</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -97,7 +98,7 @@ select,input[type=text],input[type=number],input[type=email],textarea{min-height
     <header class="site-header" role="banner">
         <div class="emoji" aria-hidden="true">🧮</div>
         <h1>算数・数学クイズゲーム</h1>
-        <p>四則演算・分数・方程式など難易度選択式の計算ゲーム。暗算力を楽しく鍛える。</p>
+        <p>⏱ 30秒で何問解ける？四則演算スピードチャレンジで暗算力を鍛えよう！</p>
         <span id="mqs-streak-badge" style="display:none;background:#fef3c7;color:#92400e;font-size:.75rem;font-weight:700;padding:3px 8px;border-radius:20px;border:1px solid #fcd34d;white-space:nowrap;margin-top:6px;display:inline-block;"></span>
     </header>
 
@@ -107,7 +108,7 @@ select,input[type=text],input[type=number],input[type=email],textarea{min-height
 
         <div class="card" id="start-screen">
           <h2 style="font-size:18px;font-weight:700;margin-bottom:12px;text-align:center;">🧮 算数・数学クイズゲーム</h2>
-          <p style="text-align:center;color:#666;font-size:14px;margin-bottom:20px;">四則演算を解いて暗算力を鍛えよう！10問に挑戦。</p>
+          <p style="text-align:center;color:#666;font-size:14px;margin-bottom:20px;">⏱ 30秒で何問解ける？四則演算スピードチャレンジ！</p>
           <button class="btn" onclick="startGame()">ゲームスタート ▶</button>
         </div>
         <div id="game-area" style="display:none;">
@@ -119,9 +120,9 @@ select,input[type=text],input[type=number],input[type=email],textarea{min-height
         <div class="card" style="margin-top:8px;">
             <h3 style="font-size:13px;font-weight:600;color:#888;margin-bottom:10px;">🔗 関連サービス</h3>
             <div style="display:flex;flex-direction:column;gap:6px;">
-                <a href="https://appadaycreator.com/kanji-grade-checker/" style="color:#6366f1;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">漢字検定レベル診断 →</a>
-                <a href="https://appadaycreator.com/study-timer-app/" style="color:#6366f1;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">勉強タイマー・集中記録アプリ →</a>
-                <a href="https://appadaycreator.com/chemical-quest/" style="color:#6366f1;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">Chemical Quest →</a>
+                <a href="https://appadaycreator.com/kanji-grade-checker/" style="color:#7c3aed;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">漢字検定レベル診断 →</a>
+                <a href="https://appadaycreator.com/study-timer-app/" style="color:#7c3aed;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">勉強タイマー・集中記録アプリ →</a>
+                <a href="https://appadaycreator.com/chemical-quest/" style="color:#7c3aed;font-size:13px;text-decoration:none;padding:6px 0;border-bottom:1px solid #f1f5f9;">Chemical Quest →</a>
             </div>
         </div>
 
@@ -130,13 +131,13 @@ select,input[type=text],input[type=number],input[type=email],textarea{min-height
 
         <!-- 使い方セクション -->
         <div class="card" style="margin-top:8px;background:#f8fafc;">
-            <h2 style="font-size:15px;font-weight:700;margin-bottom:12px;color:#374151;">📖 使い方</h2>
+            <h2 style="font-size:15px;font-weight:700;margin-bottom:12px;color:#374151;">📖 遊び方</h2>
             <ol style="padding-left:20px;font-size:13px;color:#475569;line-height:1.9;">
-                <li>ページを開き、入力フォームの項目を確認する</li>
-                <li>必要な情報を入力または選択する</li>
-                <li>実行ボタンをクリックして結果を取得する</li>
-                <li>表示された結果・アドバイスを確認する</li>
-                <li>必要に応じてコピー・SNSシェアで活用する</li>
+                <li>「かんたん・ふつう・むずかしい」から難易度を選ぶ</li>
+                <li>「ゲームスタート」を押して30秒カウントダウン開始</li>
+                <li>表示された計算式の答えを入力し「答える」を押す</li>
+                <li>制限時間内に何問正解できたかスコアを確認する</li>
+                <li>繰り返しプレイして自己ベストを更新しよう！</li>
             </ol>
         </div>
 
@@ -195,18 +196,65 @@ select,input[type=text],input[type=number],input[type=email],textarea{min-height
 
     const GCFG = { btnColor: '#6D28D9' };
     let score=0, round=0, correctAns=0, diff='easy', correct=0;
-    function initGame(){ score=0; round=0; correct=0; diff='easy'; }
+    let mqsTimer=null, mqsTimeLeft=30;
+    const MQS_TIME = 30;
+
+    function initGame(){ score=0; round=0; correct=0; diff='easy'; mqsTimeLeft=MQS_TIME; }
+
+    function startMqsTimer(){
+      clearInterval(mqsTimer);
+      mqsTimeLeft = MQS_TIME;
+      mqsTimer = setInterval(()=>{
+        mqsTimeLeft--;
+        updateTimerBar();
+        if(mqsTimeLeft<=0){ clearInterval(mqsTimer); endGame(); }
+      }, 1000);
+    }
+
+    function updateTimerBar(){
+      const bar = document.getElementById('mqs-timer-bar');
+      const sec = document.getElementById('mqs-timer-sec');
+      if(!bar || !sec) return;
+      const pct = mqsTimeLeft / MQS_TIME * 100;
+      bar.style.width = pct + '%';
+      bar.style.background = mqsTimeLeft <= 10 ? '#ef4444' : mqsTimeLeft <= 20 ? '#f97316' : '#6D28D9';
+      sec.textContent = mqsTimeLeft + '秒';
+      sec.style.color = mqsTimeLeft <= 10 ? '#ef4444' : '#6b7280';
+    }
+
     function nextRound(){
       round++;
       let a,b,op,ans;
       if(diff==='easy'){ a=Math.floor(Math.random()*20)+1; b=Math.floor(Math.random()*20)+1; op='+'; ans=a+b; }
       else if(diff==='normal'){ a=Math.floor(Math.random()*50)+1; b=Math.floor(Math.random()*50)+1; op=Math.random()<0.5?'+':'-'; ans=op==='+'?a+b:a-b; }
-      else{ a=Math.floor(Math.random()*12)+2; b=Math.floor(Math.random()*12)+2; op='×'; ans=a*b; }
+      else{
+        if(Math.random()<0.5){
+          a=Math.floor(Math.random()*12)+2; b=Math.floor(Math.random()*12)+2; op='×'; ans=a*b;
+        } else {
+          b=Math.floor(Math.random()*9)+2;
+          ans=Math.floor(Math.random()*9)+2;
+          a=b*ans; op='÷';
+        }
+      }
       correctAns=ans;
       const acc = round > 1 ? Math.round(correct/(round-1)*100) : '--';
-      document.getElementById('game-display').innerHTML=`<div style="font-size:36px;font-weight:bold;text-align:center;margin:16px 0;">${a} ${op} ${b} = ?</div><input id="ans-input" type="number" style="width:100%;padding:12px;font-size:18px;border:2px solid #e5e7eb;border-radius:8px;text-align:center;" placeholder="答えを入力" onkeydown="if(event.key==='Enter')checkAns()"><button onclick="checkAns()" style="width:100%;margin-top:8px;padding:12px;background:#6D28D9;color:white;border:none;border-radius:8px;font-size:16px;cursor:pointer;">答える</button><div style="margin-top:8px;font-size:13px;color:#999;">問題 ${round}/10 | スコア: ${score} | ✅ ${acc}%</div>`;
+      document.getElementById('game-display').innerHTML=`
+        <div style="background:#f8fafc;border-radius:10px;padding:6px 12px;margin-bottom:12px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+            <span style="font-size:12px;color:#6b7280;">残り時間</span>
+            <span id="mqs-timer-sec" style="font-size:12px;font-weight:700;color:#6b7280;">${mqsTimeLeft}秒</span>
+          </div>
+          <div style="background:#e5e7eb;border-radius:4px;height:8px;overflow:hidden;">
+            <div id="mqs-timer-bar" style="height:100%;border-radius:4px;transition:width .9s linear,background .3s;width:${mqsTimeLeft/MQS_TIME*100}%;background:${mqsTimeLeft<=10?'#ef4444':mqsTimeLeft<=20?'#f97316':'#6D28D9'};"></div>
+          </div>
+        </div>
+        <div style="font-size:40px;font-weight:bold;text-align:center;margin:16px 0;letter-spacing:2px;">${a} ${op} ${b} = ?</div>
+        <input id="ans-input" type="number" inputmode="numeric" style="width:100%;padding:12px;font-size:20px;border:2px solid #e5e7eb;border-radius:8px;text-align:center;" placeholder="答えを入力" onkeydown="if(event.key==='Enter')checkAns()">
+        <button onclick="checkAns()" data-game="1" style="width:100%;margin-top:8px;padding:12px;background:#6D28D9;color:white;border:none;border-radius:8px;font-size:16px;cursor:pointer;font-weight:600;">答える ▶</button>
+        <div style="margin-top:8px;font-size:13px;color:#999;text-align:center;">問題 ${round} | スコア: ${score} | ✅ ${acc}%</div>`;
       setTimeout(()=>document.getElementById('ans-input')?.focus(),100);
     }
+
     function checkAns(){
       const v=parseInt(document.getElementById('ans-input')?.value||'');
       if(isNaN(v)) return;
@@ -216,12 +264,14 @@ select,input[type=text],input[type=number],input[type=email],textarea{min-height
         if(inp){ inp.classList.add('mqs-shake'); setTimeout(()=>inp.classList.remove('mqs-shake'),350); }
         showFeedback(`❌ 不正解（正解: ${correctAns}）`,false);
       }
-      if(round>=10){ setTimeout(()=>endGame(),800); } else { setTimeout(nextRound,800); }
+      setTimeout(nextRound, 700);
     }
+
     function showFeedback(msg,ok){
       const el=document.getElementById('game-display');
       el.innerHTML=`<div style="font-size:28px;text-align:center;padding:32px;color:${ok?'#16a34a':'#dc2626'};">${msg}</div>`;
     }
+
     function saveMqsRanking(sc, ac){
       const key='mqs_ranking_'+diff;
       try{const list=JSON.parse(localStorage.getItem(key)||'[]');
@@ -230,6 +280,7 @@ select,input[type=text],input[type=number],input[type=email],textarea{min-height
         localStorage.setItem(key,JSON.stringify(list.slice(0,5)));
         return list.slice(0,5);}catch(e){return [];}
     }
+
     function renderMqsRanking(sc, ac){
       const list=saveMqsRanking(sc,ac);
       if(!list.length) return '';
@@ -238,36 +289,42 @@ select,input[type=text],input[type=number],input[type=email],textarea{min-height
         <p style="font-size:.72rem;font-weight:700;color:#6b7280;margin-bottom:6px;">🏅 ${labels[diff]}ランキング（Top5）</p>`+
         list.map((r,i)=>`<div style="display:flex;justify-content:space-between;font-size:.78rem;padding:2px 0;border-bottom:1px solid #f3f4f6;">
           <span>${['🥇','🥈','🥉','4位','5位'][i]} ${r.date}</span>
-          <span style="font-weight:700;color:#6D28D9">${r.score}/10</span>
+          <span style="font-weight:700;color:#6D28D9">${r.score}問</span>
           <span style="color:#6b7280">${r.acc}%</span></div>`).join('')+'</div>';
     }
+
     function endGame(){
-      const finalAcc = Math.round(correct/10*100);
+      clearInterval(mqsTimer);
+      const finalAcc = score > 0 ? Math.round(correct/score*100) : 0;
       document.getElementById('game-area').style.display='none';
       document.getElementById('result-area').style.display='block';
       document.getElementById('result-area').innerHTML=`<div class="card" style="text-align:center;">
         <h3 style="font-size:22px;font-weight:700;margin-bottom:12px;">🎉 ゲーム終了！</h3>
-        <p style="font-size:36px;font-weight:700;color:#6D28D9;">${score}/10</p>
-        <p style="color:#666;margin:12px 0;">${score>=8?'素晴らしい！':score>=5?'なかなかいい調子！':'もう一度チャレンジしよう！'}</p>
+        <p style="font-size:13px;color:#6b7280;margin-bottom:4px;">⏱ ${MQS_TIME}秒チャレンジ</p>
+        <p style="font-size:42px;font-weight:700;color:#6D28D9;">${score}問正解</p>
+        <p style="color:#666;margin:12px 0;">${score>=12?'天才！':score>=8?'素晴らしい！':score>=5?'なかなかいい調子！':'もう一度チャレンジしよう！'}</p>
         ${renderMqsRanking(score, finalAcc)}
         <button onclick="shareResult()" style="width:100%;margin-bottom:8px;padding:12px;background:#1d9bf0;color:white;border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;">🐦 Xでシェア</button>
         <button onclick="shareChallengeResult()" style="width:100%;margin-bottom:8px;padding:10px;background:#f97316;color:white;border:none;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;" title="このスコアを超えろ！で友達に挑戦">🏆 チャレンジシェア（超えろ！）</button>
         <button onclick="downloadMathCard()" style="width:100%;margin-bottom:8px;padding:10px;background:#6D28D9;color:white;border:none;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;">📸 カード保存</button>
         <button class="btn" onclick="location.reload()">もう一度</button></div>`;
     }
+
     function shareResult(){
       const diffLabel={'easy':'かんたん','normal':'ふつう','hard':'むずかしい'}[diff]||diff;
-      const finalAcc=Math.round(correct/10*100);
-      const msg=`【算数クイズ】${diffLabel} ${score}/10問正解！正解率${finalAcc}% 暗算力を試してみよう #算数クイズ #math`;
+      const finalAcc=score>0?Math.round(correct/score*100):0;
+      const msg=`【算数スピードクイズ】${MQS_TIME}秒で${score}問正解！（${diffLabel}）正解率${finalAcc}% 暗算力を試してみよう #算数クイズ #math`;
       const u=encodeURIComponent('https://appadaycreator.com/math-quiz-speed/');
       window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(msg)+'&url='+u,'_blank');
     }
+
     function shareChallengeResult(){
       const diffLabel={'easy':'かんたん','normal':'ふつう','hard':'むずかしい'}[diff]||diff;
-      const msg=`【算数クイズ】${diffLabel} ${score}/10問正解！超えられる？ #算数クイズ #math`;
+      const msg=`【算数スピードクイズ】${MQS_TIME}秒で${score}問正解！超えられる？（${diffLabel}）#算数クイズ #math`;
       const u=encodeURIComponent('https://appadaycreator.com/math-quiz-speed/');
       window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(msg)+'&url='+u,'_blank');
     }
+
     function downloadMathCard(){
       const c=document.createElement('canvas');
       c.width=520; c.height=260;
@@ -279,13 +336,13 @@ select,input[type=text],input[type=number],input[type=email],textarea{min-height
       ctx.beginPath(); ctx.moveTo(0,50); ctx.lineTo(520,50); ctx.stroke();
       ctx.beginPath(); ctx.moveTo(0,210); ctx.lineTo(520,210); ctx.stroke();
       ctx.fillStyle='rgba(255,255,255,0.9)'; ctx.font='bold 17px sans-serif'; ctx.textAlign='center';
-      ctx.fillText('🧮 算数クイズ スコアカード', 260, 34);
-      const finalAcc2=Math.round(correct/10*100);
+      ctx.fillText('🧮 算数スピードクイズ スコアカード', 260, 34);
+      const finalAcc2=score>0?Math.round(correct/score*100):0;
       const diffLabel={'easy':'かんたん','normal':'ふつう','hard':'むずかしい'}[diff]||diff;
       ctx.font='bold 64px sans-serif'; ctx.fillStyle='#fde68a';
-      ctx.fillText(score+'/10', 260, 145);
+      ctx.fillText(score+'問', 260, 145);
       ctx.font='bold 15px sans-serif'; ctx.fillStyle='rgba(255,255,255,0.7)';
-      ctx.fillText('SCORE', 260, 168);
+      ctx.fillText('⏱ '+MQS_TIME+'秒チャレンジ', 260, 168);
       ctx.font='bold 22px sans-serif'; ctx.fillStyle='#ffffff';
       ctx.textAlign='left'; ctx.fillText('✅ 正解率: '+finalAcc2+'%', 40, 200);
       ctx.textAlign='right'; ctx.fillText('📊 難易度: '+diffLabel, 480, 200);
@@ -294,20 +351,23 @@ select,input[type=text],input[type=number],input[type=email],textarea{min-height
       const a=document.createElement('a');
       a.href=c.toDataURL('image/png'); a.download='math-quiz-score.png'; a.click();
     }
+
     // ★以下変更不要★
     const BTN=GCFG.btnColor;
     document.addEventListener('DOMContentLoaded',()=>{
-      document.getElementById('start-screen').querySelector('p').textContent='四則演算を解いて暗算力を鍛えよう！10問に挑戦。';
+      document.getElementById('start-screen').querySelector('p').textContent=`⏱ ${MQS_TIME}秒で何問解ける？四則演算スピードチャレンジ！`;
       const diffDiv=document.createElement('div');
       diffDiv.style='display:flex;gap:8px;margin-bottom:16px;';
       ['かんたん','ふつう','むずかしい'].forEach((d,i)=>{
         const b=document.createElement('button');
         b.textContent=d; b.style=`flex:1;padding:10px;border:2px solid #6D28D9;border-radius:8px;background:${i===0?'#6D28D9':'white'};color:${i===0?'white':'#6D28D9'};cursor:pointer;font-size:13px;`;
-        b.onclick=()=>{ diff=['easy','normal','hard'][i]; document.querySelectorAll('#start-screen button:not(.btn)').forEach((x,j)=>{ x.style.background=j===i?'#6D28D9':'white'; x.style.color=j===i?'white':'#6D28D9'; }); };
+        b.setAttribute('data-diff', ['easy','normal','hard'][i]);
+        b.onclick=()=>{ diff=['easy','normal','hard'][i]; document.querySelectorAll('#start-screen [data-diff]').forEach((x,j)=>{ x.style.background=j===i?'#6D28D9':'white'; x.style.color=j===i?'white':'#6D28D9'; }); };
         diffDiv.appendChild(b);
       });
       document.getElementById('start-screen').insertBefore(diffDiv,document.getElementById('start-screen').querySelector('.btn'));
     });
+
     function checkMqsStreak() {
       const today = new Date().toISOString().slice(0, 10);
       const last = localStorage.getItem('mqs_last_play_date') || '';
@@ -325,7 +385,8 @@ select,input[type=text],input[type=number],input[type=email],textarea{min-height
         badge.style.display = 'inline-block';
       }
     }
-    function startGame(){ checkMqsStreak(); initGame(); document.getElementById('start-screen').style.display='none'; document.getElementById('game-area').style.display='block'; nextRound(); }
+
+    function startGame(){ checkMqsStreak(); initGame(); document.getElementById('start-screen').style.display='none'; document.getElementById('game-area').style.display='block'; nextRound(); startMqsTimer(); }
     </script>
 <script id="ux-behavior">
 (function(){
