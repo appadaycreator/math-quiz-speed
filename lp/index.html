@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>算数・数学クイズゲーム【無料】暗算スピードを楽しく鍛える計算トレーニング</title>
+<meta name="description" content="四則演算・分数・方程式まで難易度5段階の無料算数数学クイズ。暗算力をゲーム感覚で鍛えてスコアランキングに挑戦。数学カードDL・ストリーク対応。">
+<meta property="og:title" content="算数・数学クイズゲーム【無料】暗算スピードを楽しく鍛える計算トレーニング">
+<meta property="og:description" content="四則演算・分数・方程式まで難易度5段階の無料算数数学クイズ。暗算力をゲーム感覚で鍛えてスコアランキングに挑戦。">
+<meta property="og:url" content="https://appadaycreator.com/math-quiz-speed/lp/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://appadaycreator.com/math-quiz-speed/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://appadaycreator.com/math-quiz-speed/lp/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧮</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Noto Sans JP',sans-serif;color:#1e293b;line-height:1.6;background:#fff;}
+
+/* ---- NAV ---- */
+.nav{background:#4F46E5;position:sticky;top:0;z-index:999;box-shadow:0 2px 8px rgba(0,0,0,.2);}
+.nav-inner{max-width:1100px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:56px;}
+.nav-logo{color:#fff;font-size:1rem;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:6px;white-space:nowrap;}
+.nav-links{display:flex;gap:20px;list-style:none;}
+.nav-links a{color:rgba(255,255,255,.85);font-size:.82rem;text-decoration:none;white-space:nowrap;}
+.nav-links a:hover{color:#fff;}
+.nav-cta{background:#F59E0B;color:#fff!important;padding:8px 20px;border-radius:6px;font-weight:700;font-size:.85rem!important;text-decoration:none!important;white-space:nowrap;}
+.nav-cta:hover{background:#d97706!important;}
+@media(max-width:768px){.nav-links{display:none;}.nav-cta{padding:7px 14px;font-size:.8rem!important;}}
+
+/* ---- HERO ---- */
+.hero{background:linear-gradient(135deg,#fffbeb 0%,#fef3c7 50%,#fde68a 100%);padding:60px 20px 40px;}
+.hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:#4F46E5;color:#fff;font-size:.78rem;font-weight:700;padding:5px 12px;border-radius:20px;margin-bottom:16px;}
+.hero h1{font-size:2.2rem;font-weight:900;line-height:1.25;color:#1e293b;margin-bottom:16px;}
+.hero h1 span{color:#4F46E5;}
+.hero-sub{font-size:.95rem;color:#475569;margin-bottom:24px;line-height:1.8;}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px;}
+.btn-primary{display:inline-flex;align-items:center;gap:6px;background:#F59E0B;color:#fff;font-size:1.1rem;font-weight:700;padding:14px 32px;border-radius:10px;text-decoration:none;box-shadow:0 4px 15px rgba(245,158,11,.4);transition:all .2s;}
+.btn-primary:hover{background:#d97706;transform:translateY(-2px);}
+.btn-secondary{display:inline-flex;align-items:center;gap:6px;background:#fff;color:#4F46E5;font-size:1rem;font-weight:700;padding:14px 24px;border-radius:10px;text-decoration:none;border:2px solid #4F46E5;transition:all .2s;}
+.btn-secondary:hover{background:#f0f0ff;}
+.hero-stars{display:flex;align-items:center;gap:8px;font-size:.88rem;color:#64748b;}
+.hero-stars .stars{color:#F59E0B;font-size:1rem;}
+.hero-trust{display:flex;gap:16px;margin-top:16px;flex-wrap:wrap;}
+.hero-trust-item{display:flex;align-items:center;gap:6px;font-size:.82rem;color:#475569;font-weight:600;}
+.hero-trust-item .icon{font-size:1.1rem;}
+
+/* ---- GAME PREVIEW ---- */
+.game-preview{background:#fff;border-radius:16px;box-shadow:0 8px 32px rgba(79,70,229,.15);padding:16px;border:2px solid #e0e7ff;overflow:hidden;}
+.gp-header{background:#4F46E5;border-radius:10px;padding:12px 16px;color:#fff;display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;}
+.gp-timer{font-size:1.4rem;font-weight:700;}
+.gp-score{text-align:right;}
+.gp-score-num{font-size:1.5rem;font-weight:900;}
+.gp-combo{background:#F59E0B;color:#fff;font-size:.75rem;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:4px;display:inline-block;}
+.gp-bar-wrap{background:#e5e7eb;border-radius:6px;height:10px;margin-bottom:12px;overflow:hidden;}
+.gp-bar{height:100%;border-radius:6px;background:linear-gradient(90deg,#22c55e,#16a34a);width:60%;transition:width .3s;}
+.gp-problem{font-size:2rem;font-weight:900;text-align:center;color:#1e293b;padding:12px 0;font-family:monospace;letter-spacing:2px;}
+.gp-answer{background:#f8fafc;border:2px solid #4F46E5;border-radius:8px;text-align:center;font-size:1.8rem;font-weight:700;color:#4F46E5;padding:8px;}
+
+/* ---- SECTION COMMON ---- */
+section{padding:64px 20px;}
+.sec-inner{max-width:1100px;margin:0 auto;}
+.sec-title{font-size:1.6rem;font-weight:900;text-align:center;margin-bottom:8px;}
+.sec-sub{text-align:center;color:#64748b;font-size:.9rem;margin-bottom:40px;}
+
+/* ---- おすすめ ---- */
+.who-section{background:#f0f9ff;}
+.who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.who-card{background:#fff;border-radius:12px;padding:20px 16px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,.06);}
+.who-card .avatar{font-size:2.4rem;margin-bottom:8px;}
+.who-card .label{font-size:.88rem;font-weight:700;color:#1e293b;margin-bottom:4px;}
+.who-card .desc{font-size:.78rem;color:#64748b;line-height:1.6;}
+
+/* ---- FEATURES ---- */
+.features-section{background:#fff;}
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.feature-card{border:1px solid #e2e8f0;border-radius:12px;padding:20px;display:flex;gap:14px;align-items:flex-start;}
+.feature-icon{font-size:1.6rem;flex-shrink:0;background:#fef3c7;border-radius:8px;width:44px;height:44px;display:flex;align-items:center;justify-content:center;}
+.feature-title{font-size:.9rem;font-weight:700;color:#1e293b;margin-bottom:4px;}
+.feature-desc{font-size:.8rem;color:#64748b;line-height:1.6;}
+
+/* ---- STEPS ---- */
+.steps-section{background:#fafafa;}
+.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative;}
+.step-card{background:#fff;border-radius:12px;padding:20px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,.06);position:relative;}
+.step-num{background:#4F46E5;color:#fff;width:36px;height:36px;border-radius:50%;font-size:1.1rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;}
+.step-icon{font-size:1.8rem;margin-bottom:8px;}
+.step-title{font-size:.88rem;font-weight:700;color:#1e293b;margin-bottom:4px;}
+.step-desc{font-size:.78rem;color:#64748b;}
+
+/* ---- SCREENSHOT ---- */
+.screenshot-section{background:#fff;}
+.screenshot-mock{max-width:840px;margin:0 auto;background:#f8fafc;border-radius:16px;padding:24px;border:2px solid #e2e8f0;}
+.screenshot-inner{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.mock-game{background:#4F46E5;border-radius:12px;padding:16px;color:#fff;}
+.mock-result{background:#fff;border-radius:12px;padding:16px;border:2px solid #e2e8f0;}
+
+/* ---- STRENGTHS ---- */
+.strengths-section{background:#f0f9ff;}
+.strengths-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.strength-card{background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);border-top:3px solid #4F46E5;}
+.strength-num{font-size:2rem;font-weight:900;color:#4F46E5;margin-bottom:6px;}
+.strength-title{font-size:.95rem;font-weight:700;color:#1e293b;margin-bottom:4px;}
+.strength-desc{font-size:.8rem;color:#64748b;line-height:1.6;}
+
+/* ---- BOTTOM CTA ---- */
+.cta-section{background:linear-gradient(135deg,#312e81,#4F46E5);color:#fff;text-align:center;padding:64px 20px;}
+.cta-section h2{font-size:1.6rem;font-weight:900;margin-bottom:8px;}
+.cta-section p{font-size:.95rem;opacity:.85;margin-bottom:32px;}
+.btn-cta-big{display:inline-flex;align-items:center;gap:8px;background:#F59E0B;color:#fff;font-size:1.2rem;font-weight:900;padding:18px 48px;border-radius:12px;text-decoration:none;box-shadow:0 4px 20px rgba(245,158,11,.5);transition:all .2s;}
+.btn-cta-big:hover{background:#d97706;transform:translateY(-2px);}
+.cta-trust{display:flex;gap:20px;justify-content:center;margin-top:20px;flex-wrap:wrap;}
+.cta-trust-item{font-size:.82rem;opacity:.8;display:flex;align-items:center;gap:4px;}
+
+/* ---- FOOTER ---- */
+footer{background:#374151;color:#fff;text-align:center;padding:24px 20px;font-size:.8rem;}
+footer a{color:#d1d5db;}
+
+/* ---- RESPONSIVE ---- */
+@media(max-width:900px){
+.hero-inner,.features-grid,.strengths-grid{grid-template-columns:1fr 1fr;}
+.who-grid{grid-template-columns:repeat(3,1fr);}
+.steps-grid{grid-template-columns:repeat(2,1fr);}
+.screenshot-inner{grid-template-columns:1fr;}
+}
+@media(max-width:600px){
+.hero-inner{grid-template-columns:1fr;}
+.hero h1{font-size:1.6rem;}
+.who-grid{grid-template-columns:repeat(2,1fr);}
+.features-grid,.strengths-grid,.steps-grid{grid-template-columns:1fr;}
+.btn-primary{font-size:.95rem;padding:12px 24px;}
+.game-preview-wrap{display:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../" class="nav-logo">🧮 算数・数学クイズゲーム</a>
+    <ul class="nav-links">
+      <li><a href="#features">特徴</a></li>
+      <li><a href="#steps">遊び方</a></li>
+      <li><a href="#screenshots">画面イメージ</a></li>
+      <li><a href="#faq">よくある質問</a></li>
+    </ul>
+    <a href="../" class="nav-cta">今すぐチャレンジ</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">🎮 無料 &nbsp;|&nbsp; 登録不要 &nbsp;|&nbsp; ブラウザだけ</div>
+      <h1>30秒で何問解ける？<br>楽しく鍛える<br><span>暗算スピード</span></h1>
+      <p class="hero-sub">四則演算・分数・方程式まで<br>ゲーム感覚で暗算力を鍛えられる計算トレーニング</p>
+      <div class="hero-btns">
+        <a href="../" class="btn-primary">🚀 今すぐチャレンジ</a>
+        <a href="#steps" class="btn-secondary">遊び方を見る ↓</a>
+      </div>
+      <div class="hero-stars">
+        <span class="stars">★★★★★</span>
+        <span>4.7 / 5.0</span>
+      </div>
+      <div class="hero-trust">
+        <div class="hero-trust-item"><span class="icon">✅</span> 完全無料</div>
+        <div class="hero-trust-item"><span class="icon">📱</span> スマートフォン対応</div>
+        <div class="hero-trust-item"><span class="icon">💻</span> PC対応</div>
+      </div>
+    </div>
+    <div class="game-preview-wrap">
+      <div class="game-preview">
+        <div class="gp-header">
+          <div>
+            <div style="font-size:.7rem;opacity:.8;">残り時間</div>
+            <div class="gp-timer">0:18</div>
+          </div>
+          <div style="text-align:center;">
+            <div class="gp-combo">COMBO 15</div>
+            <div style="font-size:.7rem;opacity:.8;">コンボ継続中！</div>
+          </div>
+          <div class="gp-score">
+            <div style="font-size:.7rem;opacity:.8;">スコア</div>
+            <div class="gp-score-num">1280</div>
+          </div>
+        </div>
+        <div class="gp-bar-wrap">
+          <div class="gp-bar" style="width:60%;background:linear-gradient(90deg,#22c55e,#16a34a);"></div>
+        </div>
+        <div style="text-align:center;margin-bottom:6px;font-size:.75rem;color:#94a3b8;font-weight:600;">問題 No.15 &nbsp;|&nbsp; 難易度: むずかしい</div>
+        <div class="gp-problem">35 × 12 − 48 = ?</div>
+        <div class="gp-answer">372</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:12px;">
+          <div style="background:#4F46E5;color:#fff;text-align:center;padding:10px;border-radius:8px;font-weight:700;font-size:1.1rem;">7</div>
+          <div style="background:#4F46E5;color:#fff;text-align:center;padding:10px;border-radius:8px;font-weight:700;font-size:1.1rem;">8</div>
+          <div style="background:#4F46E5;color:#fff;text-align:center;padding:10px;border-radius:8px;font-weight:700;font-size:1.1rem;">9</div>
+          <div style="background:#4F46E5;color:#fff;text-align:center;padding:10px;border-radius:8px;font-weight:700;font-size:1.1rem;">4</div>
+          <div style="background:#4F46E5;color:#fff;text-align:center;padding:10px;border-radius:8px;font-weight:700;font-size:1.1rem;">5</div>
+          <div style="background:#4F46E5;color:#fff;text-align:center;padding:10px;border-radius:8px;font-weight:700;font-size:1.1rem;">6</div>
+          <div style="background:#4F46E5;color:#fff;text-align:center;padding:10px;border-radius:8px;font-weight:700;font-size:1.1rem;">1</div>
+          <div style="background:#4F46E5;color:#fff;text-align:center;padding:10px;border-radius:8px;font-weight:700;font-size:1.1rem;">2</div>
+          <div style="background:#4F46E5;color:#fff;text-align:center;padding:10px;border-radius:8px;font-weight:700;font-size:1.1rem;">3</div>
+          <div style="background:#6b7280;color:#fff;text-align:center;padding:10px;border-radius:8px;font-weight:700;font-size:1.1rem;">←</div>
+          <div style="background:#374151;color:#fff;text-align:center;padding:10px;border-radius:8px;font-weight:700;font-size:1.1rem;">0</div>
+          <div style="background:#F59E0B;color:#fff;text-align:center;padding:10px;border-radius:8px;font-weight:700;font-size:1.1rem;">✓</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- こんな人におすすめ -->
+<section class="who-section">
+  <div class="sec-inner">
+    <h2 class="sec-title">こんな人におすすめ！</h2>
+    <p class="sec-sub">年齢・目的を選ばないオールインワンの計算トレーニング</p>
+    <div class="who-grid">
+      <div class="who-card">
+        <div class="avatar">🧒</div>
+        <div class="label">算数が苦手な子</div>
+        <div class="desc">ゲーム感覚で楽しく計算力アップ</div>
+      </div>
+      <div class="who-card">
+        <div class="avatar">📚</div>
+        <div class="label">テスト前勉強したい</div>
+        <div class="desc">スピード力強化でテストに備える</div>
+      </div>
+      <div class="who-card">
+        <div class="avatar">🧠</div>
+        <div class="label">認知症予防したい</div>
+        <div class="desc">計算で脳を活性化・維持</div>
+      </div>
+      <div class="who-card">
+        <div class="avatar">🎮</div>
+        <div class="label">ゲームが好きな人</div>
+        <div class="desc">スコア・コンボでやみつきに</div>
+      </div>
+      <div class="who-card">
+        <div class="avatar">💼</div>
+        <div class="label">頭を切らしたくない</div>
+        <div class="desc">毎日の習慣で計算スピード維持</div>
+      </div>
+      <div class="who-card">
+        <div class="avatar">🏆</div>
+        <div class="label">ランキング好きの方</div>
+        <div class="desc">全国ランキングで上位を狙おう</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features-section" id="features">
+  <div class="sec-inner">
+    <h2 class="sec-title">この機能で、計算力を楽しく強化！</h2>
+    <p class="sec-sub">競合にない独自機能を多数搭載した本格計算トレーニングゲーム</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <div>
+          <div class="feature-title">フラッシュ暗算モード</div>
+          <div class="feature-desc">数字を瞬間表示→暗算で回答する上級トレーニング。反応速度を徹底強化。</div>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔥</div>
+        <div>
+          <div class="feature-title">サバイバルモード</div>
+          <div class="feature-desc">正解連続で難易度が自動UP・ミスで即終了。生存時間を競う緊張感あり。</div>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <div>
+          <div class="feature-title">数学カードDL</div>
+          <div class="feature-desc">スコア結果をカード画像として保存・シェア。競合にない独自機能。</div>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📅</div>
+        <div>
+          <div class="feature-title">30日間ランキング</div>
+          <div class="feature-desc">30日間の成績を自動集計。月間チャンピオンを目指して毎日継続。</div>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📱</div>
+        <div>
+          <div class="feature-title">SNSシェア</div>
+          <div class="feature-desc">X（Twitter）・LINEでスコアを拡散。友人への挑戦状を送ろう。</div>
+        </div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔥</div>
+        <div>
+          <div class="feature-title">ストリーク継続日数</div>
+          <div class="feature-desc">連続プレイ日数を表示。習慣化を促進する炎アイコン演出つき。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section class="steps-section" id="steps">
+  <div class="sec-inner">
+    <h2 class="sec-title">遊び方は簡単！4ステップ</h2>
+    <p class="sec-sub">ブラウザを開くだけ。インストール不要で今すぐ遊べます</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-icon">🎯</div>
+        <div class="step-title">難易度・カテゴリ選択</div>
+        <div class="step-desc">かんたん／ふつう／むずかしいから好みの難易度を選択</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-icon">⏱</div>
+        <div class="step-title">30秒問題に挑む</div>
+        <div class="step-desc">制限時間30秒でできるだけ多く問題を正解しよう</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-icon">📈</div>
+        <div class="step-title">スコア・正答率確認</div>
+        <div class="step-desc">ゲーム終了後にスコア・正答率・ジャンル別グラフを確認</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <div class="step-icon">📣</div>
+        <div class="step-title">結果をSNSシェア</div>
+        <div class="step-desc">スコアカードをDLしてXやLINEで自慢・友人に挑戦状</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCREENSHOT -->
+<section class="screenshot-section" id="screenshots">
+  <div class="sec-inner">
+    <h2 class="sec-title">ゲーム画面イメージ</h2>
+    <p class="sec-sub">シンプルながら機能充実。ゲーム感覚で毎日続けられる設計</p>
+    <div class="screenshot-mock">
+      <div class="screenshot-inner">
+        <!-- ゲーム中画面 -->
+        <div class="mock-game">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+            <div>
+              <div style="font-size:.7rem;opacity:.7;">残り時間</div>
+              <div style="font-size:1.6rem;font-weight:900;">0:12</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="background:#F59E0B;border-radius:20px;padding:3px 12px;font-size:.75rem;font-weight:700;margin-bottom:2px;">COMBO 22</div>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-size:.7rem;opacity:.7;">スコア</div>
+              <div style="font-size:1.6rem;font-weight:900;">1,840</div>
+            </div>
+          </div>
+          <div style="background:rgba(255,255,255,.15);border-radius:6px;height:8px;margin-bottom:16px;overflow:hidden;">
+            <div style="height:100%;width:40%;background:#ef4444;border-radius:6px;"></div>
+          </div>
+          <div style="font-size:2.2rem;font-weight:900;text-align:center;letter-spacing:2px;font-family:monospace;padding:10px 0;">35 × 12 − 48 = ?</div>
+          <div style="background:rgba(255,255,255,.2);border-radius:8px;text-align:center;font-size:1.8rem;font-weight:700;padding:8px;margin-top:8px;">372</div>
+        </div>
+        <!-- 結果画面 -->
+        <div class="mock-result">
+          <div style="text-align:center;margin-bottom:12px;">
+            <div style="font-size:.8rem;color:#64748b;font-weight:600;">🎉 ゲーム終了！</div>
+            <div style="font-size:2.5rem;font-weight:900;color:#4F46E5;">1,840</div>
+            <div style="font-size:.8rem;color:#64748b;">スコア</div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px;">
+            <div style="background:#f0f9ff;border-radius:8px;padding:8px;text-align:center;">
+              <div style="font-size:.7rem;color:#64748b;">正解率</div>
+              <div style="font-size:1.2rem;font-weight:700;color:#4F46E5;">95%</div>
+            </div>
+            <div style="background:#fef3c7;border-radius:8px;padding:8px;text-align:center;">
+              <div style="font-size:.7rem;color:#64748b;">回答数</div>
+              <div style="font-size:1.2rem;font-weight:700;color:#d97706;">22問</div>
+            </div>
+          </div>
+          <div style="font-size:.75rem;font-weight:700;color:#64748b;margin-bottom:6px;">📊 ジャンル別正答率</div>
+          <div style="background:#f8fafc;border-radius:8px;padding:8px;font-size:.72rem;color:#475569;">
+            <div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span>足し算</span><span style="font-weight:700;color:#22c55e;">100%</span></div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:4px;"><span>引き算</span><span style="font-weight:700;color:#F59E0B;">88%</span></div>
+            <div style="display:flex;justify-content:space-between;"><span>掛け算</span><span style="font-weight:700;color:#ef4444;">72%</span></div>
+          </div>
+          <div style="display:flex;gap:6px;margin-top:10px;">
+            <div style="flex:1;background:#1d9bf0;color:#fff;text-align:center;padding:8px;border-radius:8px;font-size:.75rem;font-weight:700;">🐦 Xシェア</div>
+            <div style="flex:1;background:#F59E0B;color:#fff;text-align:center;padding:8px;border-radius:8px;font-size:.75rem;font-weight:700;">📸 カードDL</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRENGTHS -->
+<section class="strengths-section">
+  <div class="sec-inner">
+    <h2 class="sec-title">このサービスの強み</h2>
+    <p class="sec-sub">競合を超えた、習慣化に特化した計算ゲーム</p>
+    <div class="strengths-grid">
+      <div class="strength-card">
+        <div class="strength-num">01</div>
+        <div class="strength-title">タイムバー残量でプレッシャー演出</div>
+        <div class="strength-desc">残り時間に応じて緑→黄→赤と変化。緊迫感がゲームの没入感を高めます。</div>
+      </div>
+      <div class="strength-card">
+        <div class="strength-num">02</div>
+        <div class="strength-title">コンボ表示＋アニメーション</div>
+        <div class="strength-desc">正解連続でコンボが増加。爽快感のあるフィードバックでゲーム感UP。</div>
+      </div>
+      <div class="strength-card">
+        <div class="strength-num">03</div>
+        <div class="strength-title">数学カードDL機能</div>
+        <div class="strength-desc">競合にない独自機能。スコア結果を画像化してSNSでシェアできます。</div>
+      </div>
+      <div class="strength-card">
+        <div class="strength-num">04</div>
+        <div class="strength-title">ストリーク継続日数</div>
+        <div class="strength-desc">連続プレイ日数を常時表示。習慣化を促進するゲーミフィケーション設計。</div>
+      </div>
+      <div class="strength-card">
+        <div class="strength-num">05</div>
+        <div class="strength-title">ジャンル別正答率レーダーチャート</div>
+        <div class="strength-desc">弱点ジャンルを可視化。どの計算が苦手かひと目でわかります。</div>
+      </div>
+      <div class="strength-card">
+        <div class="strength-num">06</div>
+        <div class="strength-title">完全無料・登録不要</div>
+        <div class="strength-desc">アカウント作成・アプリインストール一切不要。ブラウザだけで今すぐ遊べます。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="background:#fff;padding:64px 20px;" id="faq">
+  <div class="sec-inner">
+    <h2 class="sec-title">よくある質問</h2>
+    <p class="sec-sub">プレイ前に気になるポイントをまとめました</p>
+    <div style="max-width:700px;margin:0 auto;display:flex;flex-direction:column;gap:16px;">
+      <details style="background:#f8fafc;border-radius:12px;padding:20px;border:1px solid #e2e8f0;cursor:pointer;">
+        <summary style="font-weight:700;color:#1e293b;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;">Q. 完全無料ですか？登録は必要ですか？<span>▼</span></summary>
+        <p style="margin-top:12px;font-size:.88rem;color:#475569;line-height:1.8;">完全無料でご利用いただけます。アカウント登録・アプリのインストールは一切不要です。ブラウザだけで今すぐ遊べます。</p>
+      </details>
+      <details style="background:#f8fafc;border-radius:12px;padding:20px;border:1px solid #e2e8f0;cursor:pointer;">
+        <summary style="font-weight:700;color:#1e293b;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;">Q. スコアは保存されますか？<span>▼</span></summary>
+        <p style="margin-top:12px;font-size:.88rem;color:#475569;line-height:1.8;">ブラウザのローカルストレージに保存されます。同じブラウザ・端末では自動的に記録が引き継がれます。</p>
+      </details>
+      <details style="background:#f8fafc;border-radius:12px;padding:20px;border:1px solid #e2e8f0;cursor:pointer;">
+        <summary style="font-weight:700;color:#1e293b;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;">Q. 子どもも使えますか？<span>▼</span></summary>
+        <p style="margin-top:12px;font-size:.88rem;color:#475569;line-height:1.8;">はい。「かんたん」モードは小学生低学年から遊べます。保護者の方のサポートのもと、楽しく計算力を鍛えられます。</p>
+      </details>
+      <details style="background:#f8fafc;border-radius:12px;padding:20px;border:1px solid #e2e8f0;cursor:pointer;">
+        <summary style="font-weight:700;color:#1e293b;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;">Q. スマートフォンでも遊べますか？<span>▼</span></summary>
+        <p style="margin-top:12px;font-size:.88rem;color:#475569;line-height:1.8;">はい。スマートフォン・タブレット・PCすべてに対応しています。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="cta-section">
+  <div class="sec-inner">
+    <div style="font-size:2rem;margin-bottom:12px;">🏆</div>
+    <h2>計算力は、毎日の小さな積み重ねだ！</h2>
+    <p>30秒であなたの実力を試してみよう。</p>
+    <a href="../" class="btn-cta-big">⚡ 今すぐチャレンジ</a>
+    <div class="cta-trust">
+      <div class="cta-trust-item">✅ 無料</div>
+      <div class="cta-trust-item">📱 スマホ対応</div>
+      <div class="cta-trust-item">⏱ 30秒でできる</div>
+      <div class="cta-trust-item">🔒 登録不要</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p><a href="https://appadaycreator.com/">AppADayCreator</a>
+  | <a href="../privacy-policy.html">プライバシーポリシー</a>
+  | <a href="../terms.html">利用規約</a>
+  | <a href="../contact.html">お問い合わせ</a></p>
+  <p style="margin-top:6px;opacity:.6;font-size:.75rem;">© 2026 AppADayCreator. All services are free.</p>
+</footer>
+
+</body>
+</html>
